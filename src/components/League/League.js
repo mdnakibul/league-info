@@ -24,7 +24,7 @@ const League = (props) => {
                         League Id : {idLeague} <br/>
                         League Type : {strSport}
                     </p>
-                    <button onClick={() => infoRoute(idLeague)}>Explore</button>
+                    <button onClick={() => infoRoute(idLeague)} className="btn btn-info">Explore</button>
                 </div>
             </div>
         </div>

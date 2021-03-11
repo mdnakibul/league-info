@@ -5,6 +5,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.banner-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .detail-banner img{
     height: 200px;
@@ -16,9 +26,27 @@
     border-radius: 20px;
 }
 .league-details-right img{
-    max-height: 150px;
+    max-height: 200px;
     width: 100%;
 }
 .details-list li{
     list-style: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.league-description{
+    font-size: 28px;
+    color: #fff;
+}
+.social{
+    max-width: 300px;
+}
+ul.social li a {
+    font-size: 30px;
+}
+ul.social li{
+    list-style:none;
+    display:inline-block;
+    margin-right:20px;
 }
