@@ -1,7 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import React, { useEffect, useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import './App.css';
 import Home from './components/Home/Home';
+import LeagueInfo from './components/LeagueInfo/LeagueInfo';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const [leagues,setLeagues] = useState([])
@@ -16,7 +23,20 @@ function App() {
   },[])
   return (
     <div>
-      <Home leagues={leagues}></Home>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home leagues={leagues}></Home>
+          </Route>
+          <Route path="/leagueinfo/:id">
+            <LeagueInfo></LeagueInfo>
+          </Route>
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+
+        </Switch>
+      </Router>
     </div>
   );
 }
